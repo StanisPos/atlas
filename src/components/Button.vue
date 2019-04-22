@@ -1,5 +1,5 @@
 <template lang="pug">
-  .button(v-on:click="$emit('welcome')")
+  .button(v-on:click="$emit('welcome'), isActive = !isActive")
     .button__icon(v-bind:class="{ open : isActive }")
 
 
@@ -11,6 +11,7 @@
     height:100px;
     width:100px;
     transform: scale(0.3);
+    z-index: 100;
 
     &:hover
       cursor: pointer;
@@ -47,6 +48,7 @@
       transform-origin: right;
 
   .open
+    background-color: red;
     transform:translate(-50%,-50%) rotate(135deg);
     &::before
       top:0;

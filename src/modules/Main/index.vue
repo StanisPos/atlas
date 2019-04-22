@@ -1,5 +1,7 @@
 <template lang="pug">
   main.main
+    <MainImage />
+    <TitleBlock />
     
 </template>
 

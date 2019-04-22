@@ -1,33 +1,43 @@
 <template>
   <div id="app">
     <MainSidebar />
+    <Main />
 
   </div>
 </template>
 <script>
 
 import MainSidebar from '@/modules/MainSidebar'
+import Main from '@//modules/Main'
 
 export default {
   name: 'basic-template',
   components:{
-    MainSidebar
+    MainSidebar,
+    Main
   }
 }
 </script>
 
 <style lang="stylus">
-  @font-face 
-    font-family: 'GothamPro';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/GothamProLight.woff') format('woff'),
-          url('/assets/fonts/GothamPro-Light.ttf') format('ttf')
+  html 
+    box-sizing: border-box;
+  
+  *,
+  *::before,
+  *::after
+    box-sizing: inherit;
 
   body
     width: 100%;
     margin: 0;
     padding: 0;
+
+  img
+    max-width: 100%;
+
+  a
+    text-decoration: none;
 
   #app
     font-family 'Avenir', Helvetica, Arial, sans-serif
@@ -43,6 +53,14 @@ export default {
       color #2c3e50
       &.router-link-exact-active
         color #42b983
+
+  @font-face 
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/GothamProLight.woff') format('woff'),
+          url('/assets/fonts/GothamPro-Light.ttf') format('ttf')
+
 
   .visuallyHidden
     position: absolute;

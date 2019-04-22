@@ -1,0 +1,42 @@
+<template lang="pug">
+    .main__img-wrapper
+      .main__img-mask
+      .main__img
+
+</template>
+
+<style lang="stylus">
+  .main__img-wrapper
+    position: relative;
+
+  .main__img-mask
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    &::after
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 4px double rgba(255, 255, 255, 0.25);
+
+  .main__img
+    display: block;
+    width:100%;
+    height: 91vh;
+    background-image: url('../assets/img/2018/10/main-room.png');
+    background-repeat: no-repeat;
+    background-position: 50% 17%;
+    background-size: cover;
+
+</style>
+
+<script>
+  export default {
+    name: 'MainImage'
+  }
+</script>

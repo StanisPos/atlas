@@ -16,6 +16,7 @@
     width: 100%;
     height: 100vh;
     background-color: #444444;
+    z-index: 10;
 
   .nav__list
     margin: 0 auto;
