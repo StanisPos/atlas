@@ -8,13 +8,15 @@
 <style lang="stylus">
   .main__img-wrapper
     position: relative;
+    height: 60vh;
+    z-index: -1;
 
   .main__img-mask
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 91vh;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.1);
     &::after

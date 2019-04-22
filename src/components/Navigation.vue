@@ -1,7 +1,7 @@
 <template lang="pug">
   .nav__wrapper
     Button.nav__button(v-on:welcome="sayHi")
-    nav.nav(v-bind:class="{ testes : isHidden }")
+    nav.nav(v-bind:class="{ 'visually-hidden' : isHidden }")
       ul.nav__list
         li.nav__list-item(v-for="item in navs")
           a.nav__link(href='#') {{ item.key }}
@@ -24,7 +24,7 @@
     list-style-type: none;
 
   .nav__link
-    font-family: 'GothamPro', sans-serif;
+    font-family: 'CirceBold', sans-serif;
     font-size: 25px;
     letter-spacing: 0.5px;
     text-align: left;
@@ -32,10 +32,6 @@
     color: #b0a590;
     display: block;
     padding: 15px;
-
-  .testes
-    display: none;
-    visibility: hidden;
 
 </style>
 

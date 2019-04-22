@@ -20,6 +20,8 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import '/assets/normalize.styl'
+
   html 
     box-sizing: border-box;
   
@@ -55,14 +57,21 @@ export default {
         color #42b983
 
   @font-face 
-    font-family: 'GothamPro';
+    font-family: 'CirceBold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('~@/assets/fonts/Circe-Bold.woff') format('woff'),
+          url('~@/assets/fonts/Circe-Bold.ttf') format('ttf')
+
+  @font-face 
+    font-family: 'CirceLight';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/GothamProLight.woff') format('woff'),
-          url('/assets/fonts/GothamPro-Light.ttf') format('ttf')
+    src: url('~@/assets/fonts/Circe-Light.woff') format('woff'),
+          url('~@/assets/fonts/Circe-Light.ttf') format('ttf')
 
 
-  .visuallyHidden
+  .visually-hidden
     position: absolute;
     left: -9999px;
     clip: rect(0 0 0 0);
