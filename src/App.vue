@@ -48,14 +48,6 @@ export default {
     text-align center
     color #2c3e50
 
-  #nav
-    padding 30px
-    a
-      font-weight bold
-      color #2c3e50
-      &.router-link-exact-active
-        color #42b983
-
   @font-face 
     font-family: 'CirceBold';
     font-style: normal;
@@ -69,6 +61,20 @@ export default {
     font-weight: 400;
     src: url('~@/assets/fonts/Circe-Light.woff') format('woff'),
           url('~@/assets/fonts/Circe-Light.ttf') format('ttf')
+
+  @font-face 
+    font-family: 'PlayfairBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('~@/assets/fonts/playfair-display-v14-cyrillic-900.woff') format('woff'),
+          url('~@/assets/fonts/playfair-display-v14-cyrillic-900.woff2') format('woff2')
+
+  @font-face 
+    font-family: 'Playfair';
+    font-style: normal;
+    font-weight: 400;
+    src: url('~@/assets/fonts/playfair-display-v14-cyrillic-regular.woff') format('woff'),
+          url('~@/assets/fonts/playfair-display-v14-cyrillic-regular.woff2') format('woff2')
 
 
   .visually-hidden
