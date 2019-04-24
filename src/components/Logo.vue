@@ -131,7 +131,7 @@
   .logo__wrapper
     display: block;
     width: 150px;
-    height: 80px;
+    height: inherit;
     background-color: rgba(0, 245, 0, 0.4);
   // #test
   //   width: 150px

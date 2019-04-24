@@ -2,9 +2,9 @@
     .main__img-wrapper
       .main__img-mask
       .main__img
-      svg.main__svg-line#svg1(width="200" height="10")
-        path(stroke="white" stroke-width="5" fill="#444444" stroke-dasharray="200" stroke-dashoffset="0" d="M 0,0 L 200,0")
-          animate(attributeName="stroke-dashoffset" begin="svg1.end + 1s" repeatcount="indefinite" values="200;0;" dur="5s" fill="freeze" calcmode="linear" restart="always")  
+      svg.main__svg-line#svg1(width="200" height="5")
+        path(stroke="white" stroke-width="3" fill="#444444" stroke-dasharray="200" stroke-dashoffset="0" d="M 0,0 L 200,0")
+          animate(attributeName="stroke-dashoffset" begin="1s" repeatCount="indefinite" values="200;0;" dur="5s" fill="freeze" calcmode="linear" restart="always")  
 
 </template>
 
