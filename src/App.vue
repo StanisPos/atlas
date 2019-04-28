@@ -2,16 +2,26 @@
   <div id="app">
     <MainSidebar />
     <Main />
-
+      <div>
+        <p>
+          {{  message  }}
+        </p>
+      </div>
   </div>
 </template>
 <script>
 
 import MainSidebar from '@/modules/MainSidebar'
-import Main from '@//modules/Main'
+import Main from '@/modules/Main'
+import Json from './json.json'
 
 export default {
   name: 'basic-template',
+  data () {
+    return {
+      message: Json
+    }
+  },
   components:{
     MainSidebar,
     Main

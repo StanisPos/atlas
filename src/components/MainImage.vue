@@ -1,10 +1,10 @@
 <template lang="pug">
     .main__img-wrapper
       .main__img-mask
-      .main__img
+      .main__img(v-bind:style="{ backgroundImage: 'url(' + require('../assets/image_produciton/landscape/' + img)+ ')' }")
       svg.main__svg-line#svg1(width="200" height="5")
         path(stroke="white" stroke-width="3" fill="#444444" stroke-dasharray="200" stroke-dashoffset="0" d="M 0,0 L 200,0")
-          animate(attributeName="stroke-dashoffset" begin="1s" repeatCount="indefinite" values="200;0;" dur="5s" fill="freeze" calcmode="linear" restart="always")  
+          animate(v-on:endEvent='proverka' attributeName="stroke-dashoffset" begin="1s" repeatCount="1" values="200;0;" dur="5s" fill="freeze" calcmode="linear" restart="always")  
 
 </template>
 
@@ -33,7 +33,7 @@
     display: block;
     width:100%;
     height: 91vh;
-    background-image: url('../assets/img/2018/10/main-room.png');
+    // background-image: url('../assets/image_produciton/landscape/');
     background-repeat: no-repeat;
     background-position: 50% 17%;
     background-size: cover;
@@ -47,7 +47,28 @@
 </style>
 
 <script>
+  const arrayMainImages = [
+    'main-room.webp', 'main-room2.webp', 'main-room3.webp', 'main-room4.webp'
+  ]
+
   export default {
-    name: 'MainImage'
+    name: 'MainImage',
+    data: function() {
+      return {
+        img: arrayMainImages[0]
+      }
+    },
+    methods: {
+      proverka: function() {
+        let animater = document.querySelector('animate');
+        animater.beginElement()
+      }
+    },
+    mounted() {
+      // this.test(function() {
+      //   animate.beginElement()
+      // });
+
+    }
   }
 </script>

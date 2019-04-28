@@ -4,8 +4,8 @@
       h1.title-block__title.visually-hidden Кафе европейской кухни Атлас
       p.title-block__text Уютное, необычное и гостеприимное кафе
       .title-block__button-wrapper
-        button.title-block__button.title-block__button--left 
-        button.title-block__button.title-block__button--right
+        button.title-block__button.title-block__button--left(v-on:click="$emit('changeSlideToLeft')")
+        button.title-block__button.title-block__button--right(v-on:click="$emit('changeSlideToRight')")
 
     .title-block__footer
       p.title-block__footer-text Кафе в самом центре Воронежа
@@ -83,6 +83,15 @@
 
 <script>
   export default {
-    name: 'TitleBlock'
+    name: 'TitleBlock',
+    data: function() {
+      return {
+        methods: {
+          changeImg: function() {
+            alert('привит кит')
+          }
+        }
+      }
+    }
   }
 </script>
